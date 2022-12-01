@@ -1,7 +1,10 @@
 const { MongoClient } = require("mongodb");
 
 const connectionString = process.env.MONGODB_URI;
-const client = new MongoClient(connectionString, { useUnifiedTopology: true });
+const client = new MongoClient(connectionString, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+});
 
 let dbConnection;
 
